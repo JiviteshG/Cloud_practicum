@@ -226,6 +226,6 @@ def logout():
 	# session.pop('user', None)
 	return redirect(url_for('github_login'))
 
-if __name__ == '__main__':
-	app.secret_key = 'abcdweb'
-	app.run(debug=True, port=8001)
+# if __name__ == '__main__':
+# 	app.secret_key = 'abcdweb'
+# 	app.run(debug=True, port=8001)
