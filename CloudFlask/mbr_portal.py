@@ -11,11 +11,12 @@ from CloudFlask import app, db
 # 'postgresql://postgres:password@localhost/projectdb'
 # db = SQLAlchemy(app)
 class Mortgage_details(db.Model):
+	
 	__tablename__ = 'mbr_mortgage_details'
 	id = db.Column('id', db.Unicode, primary_key=True)
 	name = db.Column('name', db.Unicode)
 	address = db.Column('address', db.Unicode)
-	phone_number = db.Column('phone_number', db.Unicode)
+	phone_number = db.Column('phone_number', db.Integer)
 	employer_info = db.Column('employer_info', db.Unicode)
 	salary = db.Column('salary', db.Unicode)
 	start_date = db.Column('start_date',db.DateTime)
