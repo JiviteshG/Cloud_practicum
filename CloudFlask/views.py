@@ -43,10 +43,9 @@ def login():
 		userid = request.form['name']
 		get_user = Mortgage_details.query.filter_by(name=userid).first()
 		password = request.form['password']
-		user = Mortgage_details()
+        user = Mortgage_details()
         user.name = userid
         user.password = password
-
         db.session.add(user)
         db.commit()
 
