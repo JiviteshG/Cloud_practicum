@@ -38,18 +38,16 @@ def home():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-
+    user = Mortgage_details()
+    user.name = "test"
+    user.password = "test"
+    db.session.add(user)
+    db.commit()
 	if request.method == 'POST':
 		userid = request.form['name']
 		get_user = Mortgage_details.query.filter_by(name=userid).first()
 		password = request.form['password']
-        user = Mortgage_details()
-        user.name = userid
-        user.password = password
-        db.session.add(user)
-        db.commit()
-
-		if get_user.password == password :
+        if get_user.password == password :
 			if get_user.address is None or get_user.phone_number is None or get_user.employer_info is None or get_user.salary is None or get_user.mortgage_value is None or get_user.start_date is None or get_user.m1sid is None or get_user.ins_value is None or get_user.ded_value: 
 				get_user.application_status='Complete'
 				print(get_user.application_status)
