@@ -11,7 +11,6 @@ from CloudFlask import app, db
 # 'postgresql://postgres:password@localhost/projectdb'
 # db = SQLAlchemy(app)
 class Mortgage_details(db.Model):
-	
 	__tablename__ = 'mbr_mortgage_details'
 	id = db.Column('id', db.Unicode, primary_key=True)
 	name = db.Column('name', db.Unicode)
