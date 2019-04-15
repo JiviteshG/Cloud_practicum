@@ -12,7 +12,7 @@ from CloudFlask import app, db
 # app = Flask(__name__)
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sneha3010@localhost/projectdb'
-# app.config['SECRET_KEY'] = 'thisisasecretkey'
+app.config['SECRET_KEY'] = 'thisisasecretkey'
 
 # Source: https://stackoverflow.com/questions/27785375/testing-flask-oauthlib-locally-without-https
 # for github HTTPS
