@@ -39,7 +39,7 @@ class Employee_details(db.Model):
 with app.app_context():
     db.create_all()
 
-@app.route('/emp')
+@app.route('/')
 def home(): 
 # if github.authorized:
 	print("A")
