@@ -5,4 +5,4 @@ The flask application package.
 from flask import Flask
 app = Flask(__name__)
 
-import CloudFlask.employer_portal
+import CloudFlask.views
