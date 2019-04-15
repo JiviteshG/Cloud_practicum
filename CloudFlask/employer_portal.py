@@ -8,10 +8,10 @@ from flask_dance.contrib.twitter import make_twitter_blueprint, twitter
 from flask_dance.contrib.github import make_github_blueprint, github 
 import os 
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sneha3010@localhost/projectdb'
-app.config['SECRET_KEY'] = 'thisisasecretkey'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sneha3010@localhost/projectdb'
+# app.config['SECRET_KEY'] = 'thisisasecretkey'
 
 # Source: https://stackoverflow.com/questions/27785375/testing-flask-oauthlib-locally-without-https
 # for github HTTPS
@@ -23,9 +23,9 @@ github_blueprint = make_github_blueprint(client_id='b1198cf45b0983ee621f', clien
 app.register_blueprint(twitter_blueprint, url_prefix = '/twitter_login')
 app.register_blueprint(github_blueprint, url_prefix = '/github_login')
 
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
-employee_id = '1'
+# employee_id = '1'
 
 class Employee_details(db.Model):
 	__tablename__ = 'emp_employee'
