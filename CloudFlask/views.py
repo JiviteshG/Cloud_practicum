@@ -29,7 +29,9 @@ class Mortgage_details(db.Model):
 	password = db.Column('password', db.Unicode)
 	application_status = db.Column('application_status', db.Unicode)
 
-
+with app.app_context():
+    db.create_all()
+    
 @app.route('/')
 def home():
 	return render_template('home.html')
