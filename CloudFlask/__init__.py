@@ -10,4 +10,5 @@ app = Flask(__name__)
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
-import CloudFlask.views
+# import CloudFlask.views
+import CloudFlask.mbr_portal
