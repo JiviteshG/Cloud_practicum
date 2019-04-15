@@ -38,6 +38,7 @@ class Employee_details(db.Model):
 
 with app.app_context():
     db.create_all()
+flag = false
 
 @app.route('/')
 def home(): 
@@ -48,7 +49,7 @@ def home():
 	git_username = ''
 	print(git_username)
 	print('Checking uname')
-	if account_info.ok:
+	if account_info.ok and flag==false:
 		print('Checking uname started')
 		account_info_json = account_info.json()
 		git_username = account_info_json['login']
@@ -227,6 +228,7 @@ def logout():
 	f.close()
 	session.pop('user', None)
 	# session.pop('user', None)
+	flag = true
 	return redirect(url_for('github_login'))
 
 # if __name__ == '__main__':
