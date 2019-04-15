@@ -29,7 +29,7 @@ app.register_blueprint(github_blueprint, url_prefix = '/github_login')
 # employee_id = '1'
 
 class Employee_details(db.Model):
-	__tablename__ = 'emp_employee'
+	__tablename__ = 'emp_employee1'
 	username = db.Column('username', db.Unicode, primary_key=True)
 	password = db.Column('password', db.Unicode)
 	emp_name = db.Column('emp_name', db.Unicode)
