@@ -32,8 +32,8 @@ class re_Details(db.Model):
 	M1sID = db.Column('m1sid', db.Unicode, primary_key=True)
 	Value = db.Column('value', db.Unicode)
 
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 @app.route('/')
 def home():
