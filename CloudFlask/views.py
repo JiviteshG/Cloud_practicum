@@ -14,7 +14,7 @@ from flask_dance.contrib.github import make_github_blueprint, github
 
 class Mortgage_details(db.Model):
 	__tablename__ = 'mbr_mortgage_details'
-	id = db.Column('id', db.Unicode, primary_key=True)
+	id = db.Column('id', db.Unicode)
 	name = db.Column('name', db.Unicode)
 	address = db.Column('address', db.Unicode)
 	phone_number = db.Column('phone_number', db.Integer)
