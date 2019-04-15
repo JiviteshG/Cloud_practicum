@@ -10,6 +10,26 @@ from flask_sqlalchemy import SQLAlchemy
 import requests
 from flask_dance.contrib.twitter import make_twitter_blueprint, twitter
 from flask_dance.contrib.github import make_github_blueprint, github 
+db = SQLAlchemy(app)
+
+class Mortgage_details(db.Model):
+	__tablename__ = 'mbr_mortgage_details'
+	id = db.Column('id', db.Unicode, primary_key=True)
+	name = db.Column('name', db.Unicode)
+	address = db.Column('address', db.Unicode)
+	phone_number = db.Column('phone_number', db.Integer)
+	employer_info = db.Column('employer_info', db.Unicode)
+	salary = db.Column('salary', db.Unicode)
+	start_date=db.Column('start_date',db.DateTime)
+	mortgage_value=db.Column('mortgage_value',db.Unicode)
+	mortid=db.Column('mortid', db.Unicode)
+	m1sid=db.Column('m1sid',db.Unicode)
+	ins_value=db.Column('ins_value',db.Unicode)
+	ded_value=db.Column('ded_value',db.Unicode)
+	password = db.Column('password', db.Unicode)
+	application_status = db.Column('application_status', db.Unicode)
+
+
 @app.route('/')
 def home():
 	return render_template('home.html')
