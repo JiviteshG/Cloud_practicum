@@ -39,6 +39,7 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     user = Mortgage_details()
+    user.id = 1
     user.name = "test"
     user.password = "test"
     db.session.add(user)
