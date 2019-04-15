@@ -4,13 +4,13 @@ Routes and views for the flask application.
 
 from datetime import datetime
 from flask import render_template
-from CloudFlask import app
+from CloudFlask import app, db
 from flask import Flask, render_template, request, flash, logging, url_for, redirect, jsonify, make_response, session, g
 from flask_sqlalchemy import SQLAlchemy
 import requests
 from flask_dance.contrib.twitter import make_twitter_blueprint, twitter
 from flask_dance.contrib.github import make_github_blueprint, github 
-db = SQLAlchemy(app)
+
 
 class Mortgage_details(db.Model):
 	__tablename__ = 'mbr_mortgage_details'
