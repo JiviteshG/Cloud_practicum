@@ -43,7 +43,7 @@ def login():
     user.password = "test"
     db.session.add(user)
     db.commit()
-	if request.method == 'POST':
+    if request.method == 'POST':
 		userid = request.form['name']
 		get_user = Mortgage_details.query.filter_by(name=userid).first()
 		password = request.form['password']
