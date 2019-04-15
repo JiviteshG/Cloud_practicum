@@ -50,14 +50,7 @@ def login():
     user.password = "test"
     db.session.add(user)
     db.session.commit()
-	# f = open("log2.txt", "w+")
-	# f.write("method: GET \nEnd-point: http://127.0.0.1:8000/login \nparameters: None\n" )
-	# f.close()
 	if request.method == 'POST':
-		# f = open("log2.txt", "w+")
-		# f.write("Method: POST \nEndpoint: http://127.0.0.1.8000/login, \nParameters: userid: "+request.form['userid']+", name: "+request.form['name']+" \r\n\n\n")
-		# f.close()
-
 		userid = request.form['name']
 		get_user = Mortgage_details.query.filter_by(name=userid).first()
 		password = request.form['password']
