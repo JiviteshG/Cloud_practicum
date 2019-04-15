@@ -10,6 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 import requests
 from flask_dance.contrib.twitter import make_twitter_blueprint, twitter
 from flask_dance.contrib.github import make_github_blueprint, github 
+import random 
 
 
 class Mortgage_details(db.Model):
