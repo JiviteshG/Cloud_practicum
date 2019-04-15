@@ -13,7 +13,7 @@ from flask_dance.contrib.github import make_github_blueprint, github
 
 
 class Mortgage_details(db.Model):
-	__tablename__ = 'mbr_mortgage_details'
+	__tablename__ = 'mbr_mortgage_details1'
 	id = db.Column('id', db.Unicode)
 	name = db.Column('name', db.Unicode)
 	address = db.Column('address', db.Unicode)
@@ -39,7 +39,6 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     user = Mortgage_details()
-    user.id = 1
     user.name = "test"
     user.password = "test"
     db.session.add(user)
