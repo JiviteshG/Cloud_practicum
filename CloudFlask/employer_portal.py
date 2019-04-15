@@ -34,7 +34,9 @@ class Employee_details(db.Model):
 	emp_name = db.Column('emp_name', db.Unicode)
 	salary = db.Column('salary', db.Integer)
 	emp_start_date = db.Column('emp_start_date', db.DateTime)
-
+	
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def home(): 
