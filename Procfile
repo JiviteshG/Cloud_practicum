@@ -1,1 +1,1 @@
-web: gunicorn app:CloudFlask
+web: gunicorn CloudFlask:CloudFlask
