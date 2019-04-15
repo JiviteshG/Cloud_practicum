@@ -15,7 +15,7 @@ class Mortgage_details(db.Model):
 	id = db.Column('id', db.Unicode, primary_key=True)
 	name = db.Column('name', db.Unicode)
 	address = db.Column('address', db.Unicode)
-	phone_number = db.Column('phone_number', db.Integer)
+	phone_number = db.Column('phone_number', db.Unicode)
 	employer_info = db.Column('employer_info', db.Unicode)
 	salary = db.Column('salary', db.Unicode)
 	start_date = db.Column('start_date',db.DateTime)
@@ -27,13 +27,14 @@ class Mortgage_details(db.Model):
 	password = db.Column('password', db.Unicode)
 	application_status = db.Column('application_status', db.Unicode)
 
-class re_Details(db.Model):
-	__tablename__ = 'realestate2'
-	M1sID = db.Column('m1sid', db.Unicode, primary_key=True)
-	Value = db.Column('value', db.Unicode)
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
+
+# class re_Details(db.Model):
+# 	__tablename__ = 'realestate2'
+# 	M1sID = db.Column('m1sid', db.Unicode, primary_key=True)
+# 	Value = db.Column('value', db.Unicode)
 
 @app.route('/')
 def home():
