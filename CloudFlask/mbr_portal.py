@@ -54,7 +54,6 @@ def login():
 	# f.write("method: GET \nEnd-point: http://127.0.0.1:8000/login \nparameters: None\n" )
 	# f.close()
 	if request.method == 'POST':
-
 		# f = open("log2.txt", "w+")
 		# f.write("Method: POST \nEndpoint: http://127.0.0.1.8000/login, \nParameters: userid: "+request.form['userid']+", name: "+request.form['name']+" \r\n\n\n")
 		# f.close()
