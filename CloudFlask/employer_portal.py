@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 from flask_dance.contrib.twitter import make_twitter_blueprint, twitter
 from flask_dance.contrib.github import make_github_blueprint, github 
 import os 
+from CloudFlask import app, db
 
 # app = Flask(__name__)
 
@@ -34,7 +35,7 @@ class Employee_details(db.Model):
 	emp_name = db.Column('emp_name', db.Unicode)
 	salary = db.Column('salary', db.Integer)
 	emp_start_date = db.Column('emp_start_date', db.DateTime)
-	
+
 with app.app_context():
     db.create_all()
 
