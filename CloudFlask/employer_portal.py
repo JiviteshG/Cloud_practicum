@@ -47,12 +47,12 @@ def home():
 	print('Checking uname')
 	if account_info.ok:
 		print('Checking uname started')
-	account_info_json = account_info.json()
-	git_username = account_info_json['login']
-	print(git_username)
-	session['user'] = git_username
-	print("Reach")
-	return redirect(url_for('addEmployer',  username=session['user']))
+		account_info_json = account_info.json()
+		git_username = account_info_json['login']
+		print(git_username)
+		session['user'] = git_username
+		print("Reach")
+		return redirect(url_for('addEmployer',  username=session['user']))
 	return render_template('employer_home.html')
 
 @app.before_request
