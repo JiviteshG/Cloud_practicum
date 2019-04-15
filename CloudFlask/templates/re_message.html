@@ -1,0 +1,15 @@
+
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li<{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+		
+      
+      <a href = "{{ url_for('.property', Name=re_Details.Name, Value=re_Details.Value) }}"> {{re_Details.M1sID}} </a> <br>>
+     
+   
