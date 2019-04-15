@@ -11,5 +11,5 @@ heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 # import CloudFlask.views
-# import CloudFlask.mbr_portal
-import CloudFlask.employer_portal
+import CloudFlask.mbr_portal
+# import CloudFlask.employer_portal
