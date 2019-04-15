@@ -28,7 +28,7 @@ class Mortgage_details(db.Model):
 	application_status = db.Column('application_status', db.Unicode)
 
 class re_Details(db.Model):
-	__tablename__ = 'realestate'
+	__tablename__ = 'realestate2'
 	M1sID = db.Column('m1sid', db.Unicode, primary_key=True)
 	Value = db.Column('value', db.Unicode)
 
